@@ -1,0 +1,53 @@
+<div class="container">
+
+    <form (ngSubmit)="onSubmit()" #f="ngForm" class="main-form needs-validatio">
+
+        <div class="row br">
+            <div class="col">
+                <div class="form-group">
+                    <label for="username">username</label>
+                    <input type="text" name="username" id="username" class="form-control" ngModel disabled
+                        [(ngModel)]="user.username">
+                    <small class="form-text text-muted">
+                        you will login using this and password
+                    </small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="password">password</label>
+                    <input type="password" name="password" id="password" class="form-control" ngModel required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row br">
+            <div class="col">
+                <div class="form-group">
+                    <label for="realitvenumber">realtive number</label>
+                    <input type="text" name="realitvenumber" id="realitvenumber" class="form-control" ngModel
+                        maxlength="11" (keypress)="onlyNumberKey($event)" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row br">
+            <div class="col">
+                <div class="form-group">
+                    <label for="country">country</label>
+                    <select name="country" id="country" class="form-control" ngModel required>
+                        <option value="Egypt">Egypt</option>
+                        <option value="Sudan">Sudan</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button [disabled]="!f.valid" class="btn btn-primary submit" type="submit">Submit</button>
+    </form>
+
+
+    <div class="alert alert-success" role="alert" *ngIf="editStatus">
+        your info edit succsfully
+    </div>
+
+</div>

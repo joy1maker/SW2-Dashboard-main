@@ -1,0 +1,30 @@
+.logout {
+    margin-left: 90%;
+    margin-bottom: 100%px;
+    position: absolute;
+}
+
+.data {
+
+    border: 1px solid black;
+    padding: 10px;
+    margin: 30px;
+    width: max-content;
+    font-size: 2rem;
+}
+
+.dash {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 60px;
+    width: max-content;
+}
+
+.msg {
+    background-color: #ff00007a;
+    font-size: 200%;
+    padding: 20px;
+    width: fit-content;
+    margin: 10px auto;
+    border-radius: 50px;
+}

@@ -1,0 +1,15 @@
+<body>
+    <div class="box">
+        <h1>Sensors</h1><br />
+        <label class="labelheart" for="HRS">Heart Rate </label>
+        <br />
+        <input class="inputheart" placeholder="Heart Rate Sensor" [(ngModel)]="HRSensorReading" type="text" id="HRS"
+            ngModel name="HRS" required /><br />
+        <label class="labelblood" for="BPS">Blood Pressure </label>
+        <br />
+        <input class="inputblood" placeholder="Blood Pressure Sensor" [(ngModel)]="BPSensorReading" type="text" id="BPS"
+            ngModel name="BPS" required />
+        <br />
+        <input class="senses" type="button" value="sense" (click)="insertData()">
+    </div>
+</body>

@@ -1,0 +1,23 @@
+<button type="button" class="btn btn-danger logout" (click)="onLogOut()">logout</button>
+
+<div class="row">
+
+    <div class="col">
+        <div class="dash">
+            <div class="data">welcome
+                <div>{{username }} </div>
+            </div>
+            <div class="data"> HeartRate:{{heartRate}}</div>
+            <div class="data"> BloodPressure:{{bloodPressure}}</div>
+        </div>
+    </div>
+    <div class="col">
+        <app-heart-beat></app-heart-beat>
+    </div>
+
+
+</div>
+<div *ngIf="msgStatus">
+    <p class="msg">{{message}}
+    </p>
+</div>

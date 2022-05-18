@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "attackssaviorsystem": {
+      "hosting": {
+        "memberAttackSavior": [
+          "attackssaviorsystem"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "attackssaviorsystem"
+  }
+}

@@ -1,0 +1,27 @@
+<div class="container" *ngIf="loginshow">
+
+    <form (ngSubmit)="onSubmit(f.value)" #f="ngForm" class="main-form needs-validatio">
+        <div class="row br">
+            <div class="col">
+                <div class="form-group">
+                    <label for="username" class="label">username</label>
+                    <input type="text" name="username" id="username" class="form-control input" ngModel required>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="password">password</label>
+                    <input type="password" name="password" id="password" class="form-control" ngModel required>
+                </div>
+            </div>
+        </div>
+
+        <button [disabled]="!f.valid" class="btn btn-primary submit" type="submit">Submit</button>
+    </form>
+    <div class=" alert alert-danger" role="alert" *ngIf="errStatus">
+        {{errMsg}}
+    </div>
+    <!-- <div class="alert alert-success " role="alert" *ngIf="!errStatus">
+        login sucssfully
+    </div> -->
+</div>

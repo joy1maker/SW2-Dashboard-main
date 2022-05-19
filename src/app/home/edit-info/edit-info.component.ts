@@ -44,6 +44,7 @@ export class EditInfoComponent implements OnInit {
       'country': user.country
     });
     this.editStatus = true;
+    localStorage.setItem("realtivenumber", this.signupForm.value.realitvenumber);
     setTimeout(() => {
       window.location.reload();
     }, 2000);
